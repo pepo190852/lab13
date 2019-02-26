@@ -11,7 +11,7 @@ void showMatrix(const bool [][N]);
 
 int main(){
 	double A[N][N]; 
-	bool B[N][N]; 
+	bool B[N][N]={0}; 
 	cout << "Input the matrix.....\n";
 	inputMatrix(A);
 	findLocalMax(A,B);
@@ -32,7 +32,7 @@ void inputMatrix(double A[][N])
 		}
 	}
 }
-void matrixMultiply(const double A[][N],bool B[][N])
+void findLocalMax(const double A[][N],bool B[][N])
 {
 for(int i=0;i<N;i++)
 	{
@@ -50,7 +50,10 @@ void showMatrix(const bool B[][N])
 {
 	for(int i = 0; i < N; i++)
 	{
-		for(int j=0)
+		for(int j=0;j<N;j++){
+			cout << B[i][j] << " ";		
+		}
+		cout << "\n";
 	}
 	
 }
